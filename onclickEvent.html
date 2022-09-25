@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>   
+    <title>Div Tags</title>
+</head>
+
+<script>
+    function Dice(mensaje){
+        alert(mensaje);
+    }
+
+</script>
+<body>
+    <div id="contenedor" style="position: relative;">
+        <div onclick="Dice('Soy Amarillo');" id="capa1" style="position: absolute; 
+                               left:20px; top:40px;
+                               background-color:yellow; z-index:1;
+                               width:100px; height:100px;">A</div>
+        <div onclick="Dice('Soy Rojo')" id="capa2" style="position: absolute; 
+                               left:128px; top:40px;
+                               background-color:RED; z-index:1; 
+                               width:100px; height:100px;">R</div>
+                      
+    </div>
+</body>
+</html>
