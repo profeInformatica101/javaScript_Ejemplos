@@ -5,8 +5,12 @@
 </head>
 
 <script>
+    var memoria = "";
     function Dice(mensaje){
+        //Realiza un mensaje pop-up
         alert(mensaje);
+        //Escribe código HTML en la página.
+        document.getElementById('contenedor').innerHTML += "<b style='color:blue;'>"+mensaje+"</b></br>";
     }
 
 </script>
