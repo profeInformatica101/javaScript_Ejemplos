@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Tablero</title>
+    <style>
+      .par{
+        background-color:yellow;
+        width:100px;
+        height:100px;
+      }
+      .impar{
+        background-color:blue;
+        width:100px;
+        height:100px;
+      }
+
+      .par:hover{
+        background-color:red;
+      }
+      .impar:hover{
+        background-color:green;
+      }
+    </style>
+    <script>
+        function function_onclic(celda){
+            alert(celda);
+        }
+    </script>
+  </head>
+  <body>
+    <table id="tablero">
+        <tr>
+          <td><div id="A0" class="par" onclick="function_onclic('A0')"></div></td>
+          <td><div id="B0" class="impar"  onclick="function_onclic('B0')"></div></td>
+          <td><div id="C0" class="par" onclick="function_onclic('C0')"></div></td>
+          <td><div id="D0" class="impar" onclick="function_onclic('D0')"></div></td>
+        </tr>
+        <tr>
+          <td><div id="A1" class="impar" onclick="function_onclic('A1')"></div></td>
+          <td><div id="B1" class="par" onclick="function_onclic('B1')"></div></td>
+          <td><div id="C1" class="impar" onclick="function_onclic('C1')"></div></td>
+          <td><div id="D1" class="par" onclick="function_onclic('D1')"></div></td>
+        </tr>
+        <tr>
+          <td><div id="A2" class="par" onclick="function_onclic('A2')"></div></td>
+          <td><div id="B2" class="impar" onclick="function_onclic('B2')"></div></td>
+          <td><div id="C2" class="par" onclick="function_onclic('C2')"></div></td>
+          <td><div id="D2" class="impar" onclick="function_onclic('D2')"></div></td>
+
+        </tr>
+        <tr>
+          <td><div id="A3" class="impar" onclick="function_onclic('A3')"></div></td>
+          <td><div id="B3" class="par"  onclick="function_onclic('B3')"></div></td>
+          <td><div id="C3" class="impar" onclick="function_onclic('C3')"></div></td>
+          <td><div id="D3" class="par" onclick="function_onclic('D3')"></div></td>
+
+        </tr>
+
+      </table>
+  </body>
+</html>
