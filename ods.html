@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivo ODS</title>
+    <script>
+        let lista_ods = ["Fin de la Pobreza", 
+        "Hambre Cero", "Salud y Bienestar", "Educación de calidad", 
+        "Igualdad de genero", "Agua limpia y saneamiento", 
+        "Energía sostenible y no contaminante", "Trabajo decente y crecimiento ecónomico", 
+        "Industria, innovación e infrastructura", "Reducción de las desigualdades", 
+        "Ciudades y comunidades sostenibles", "Producción y consumo responsables", 
+        "Acción por el clima", "Vida Submarina", "Vida de ecosistemas terrestres", 
+        "Paz, Justicia e Instituciones sódias", 
+        "Alianzas para lograr los objetivos"];
+
+    </script>
+</head>
+<body>
+
+    <div id="mensaje"></div>
+<img src="images/ODS-círculo.png" alt="Objetivos de desarrollo sostenible" />
+    <script>
+        let nombre = "";
+        let ods = "";
+
+        nombre = prompt("¿Como te llamas?");
+        ods = prompt("Selecciona un OBJETIVO ODS. Elige entre 1 y 17:");
+     
+        let ods_select = parseInt(ods) - 1;
+
+        if(ods_select>=0 && ods_select<=16){
+              document.getElementById("mensaje").innerHTML += "<h1>Hola " + nombre + "</h1>";
+                document.getElementById("mensaje").innerHTML += "Has elegido el objetivo <mark>" + lista_ods[ods_select] + "</mark>";
+        }else{
+            document.getElementById("mensaje").innerHTML += "<h1>Hola " + nombre + "</h1>";
+            document.getElementById("mensaje").innerHTML += "<p> No has elegido correctamente</p>";
+        }
+        
+
+
+    </script>
+
+</body>
+</html>
