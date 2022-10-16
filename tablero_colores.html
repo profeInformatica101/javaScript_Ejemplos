@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero</title>
+</head>
+
+
+<body>
+    <script>
+        let var_objeto = "<div class='objeto'></div>";
+        let var_vacio = "<div class='vacio'></div>";
+
+        function funcion_click(id){
+            let html_div = document.getElementById(id).innerHTML;
+            if(html_div.includes('objeto')){
+                document.getElementById(id).innerHTML = var_vacio ;
+            }else{
+                document.getElementById(id).innerHTML = var_objeto ;
+            }
+        }
+
+
+
+    </script>
+
+    <style>
+        .par{
+            background-color: red;
+            width:100px;  
+            height:100px;
+        }
+        .impar{
+            background-color: blue;
+            width:100px;  
+            height:100px;
+        }
+        .objeto{
+            background-color: yellow;
+            width:100px;  
+            height:100px;
+        }
+        .vacio{
+            background-color: green;
+            width:100px;  
+            height:100px;
+        }
+    </style> 
+    <table >
+        <tr>
+            <td><div id="celda0" class="celda par" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda1" class="celda impar" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda2" class="celda par" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda3" class="celda impar" onclick="funcion_click(this.id);"></div></td>
+        </tr>
+        <tr>
+            <td><div id="celda4" class="celda impar" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda5" class="celda par" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda6" class="celda impar" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda7" class="celda par" onclick="funcion_click(this.id);"></div></td>
+        </tr>
+        <tr>
+            <td><div id="celda8" class="celda par" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda9" class="celda impar" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda10" class="celda par" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda11" class="celda impar" onclick="funcion_click(this.id);"></div></td>
+        </tr>
+        <tr>
+            <td><div id="celda12" class="celda impar" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda13" class="celda par" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda14" class="celda impar" onclick="funcion_click(this.id);"></div></td>
+            <td><div id="celda15" class="celda par" onclick="funcion_click(this.id);"></div></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
