@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máximo-Mínimo</title>
+</head>
+<body>
+    <script>
+        function max(num1, num2, num3){
+            if(num1 > num2){
+                if(num1 > num3){
+                    return num1;
+                }else{
+                    return num3;
+                }
+            }else{
+                if(num2>num3){
+                    return num2;
+                }else{
+                    return num3;
+                }
+            }
+        }
+
+        function min(num1, num2, num3){
+            if(num1 < num2){
+                if(num1 < num3){
+                    return num1;
+                }else{
+                    return num3;
+                }
+            }else{
+                if(num2<num3){
+                    return num2;
+                }else{
+                    return num3;
+                }
+            }
+        }
+
+        function ver_max_min(){
+            var numero1 = parseInt(document.getElementById("num1").value);
+            var numero2 = parseInt(document.getElementById("num2").value);
+            var numero3 = parseInt(document.getElementById("num3").value);
+
+            var maximo = max(numero1, numero2, numero3);
+            var minimo = min(numero1, numero2, numero3);
+
+
+            document.getElementById("max").value=maximo;
+            document.getElementById("min").value=minimo;
+        }
+    </script>
+
+    Numero 1: <input type="number" id="num1"><br>
+    Numero 2: <input type="number" id="num2"><br>
+    Numero 3: <input type="number" id="num3"><br>
+    <input type="button" value="Ver" onclick="ver_max_min()">
+
+    Maximo: <input type="text" id="max" disabled>
+    Mínimo: <input type="text" id="min" disabled>
+
+
+</body>
+</html>
