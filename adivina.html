@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero aleatorio</title>
+</head>
+<body>
+    Numero: <input type="number" id="numero">
+    <input type="button" value="Probar" onclick="probar()">
+
+
+    <script>
+
+        var numeroAleatorio = numeroAleatorio(10);
+        var intentos = 3;
+
+        function numeroAleatorio(n){
+             // Generar un número aleatorio entre 0 y 1
+            let randomNumber = Math.random();
+
+            // Multiplicar el número aleatorio por n para obtener un número entre 0 y n
+            randomNumber = randomNumber * n;
+
+            // Redondear el número hacia abajo con Math.floor() para obtener un número entero entre 1 y 10
+            randomNumber = Math.floor(randomNumber);
+            
+            // Mostrar el número generado en la consola
+            console.log(randomNumber);
+            
+            
+            return randomNumber;
+        }
+
+        function probar(){
+              
+                    
+                var num = document.getElementById("numero").value;
+
+                if(this.intentos == 0){
+                    alert("Has perdido");
+                }else{
+                    if(num == this.numeroAleatorio){
+                        alert("Has acertado!")
+                    }else{
+                        this.intentos = this.intentos - 1;
+                        alert("Te quedan " + this.intentos + " intentos");
+                    }
+                }
+
+                
+        }
+
+       
+    </script>
+</body>
+</html>
