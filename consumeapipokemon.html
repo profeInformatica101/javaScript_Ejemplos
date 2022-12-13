@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getPokemonNames()">Ver nombres de Pokémon</button>
+
+<script>
+  function getPokemonNames() {
+    // Realizar una solicitud GET a la URL de la API de PokeAPI
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=1000')
+      .then(response => response.json())
+      .then(data => {
+        // Recorrer el array de resultados y mostrar los nombres de los Pokémon
+        for (let pokemon of data.results) {
+          console.log(pokemon.name);
+        }
+      })
+  }
+</script>
+</body>
+</html>
